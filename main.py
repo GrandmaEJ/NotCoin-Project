@@ -1,5 +1,4 @@
 import os
-import asyncio
 import json
 from pyrogram import Client, filters
 from flask import Flask
@@ -12,10 +11,13 @@ load_dotenv()
 api_id = os.getenv('API_ID')
 api_hash = os.getenv('API_HASH')
 bot_token = os.getenv('BOT_TOKEN')
-bot_user = "coin_grandpa_bot"
-domain_app = "https://coin-grandpa.onrender.com"
+bot_user = os.getenv("bot_user")
+domain_app = os.getenv("domain")
 
 print(api_id)
+print(api_hash)
+print(bot_user)
+print(domain_app)
 
 # Load user data from a JSON file
 def load_data():
@@ -64,4 +66,10 @@ async def referral(client, message):
 if __name__ == "__main__":
     app.start()
     from game import web_app
-    web_app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
+    # Start the Flask web app in a separate thread
+    import threading
+    threading.Thread(target=lambda: web_app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5002)))).start()
+
+    # Keep the bot running
+    app.idle()
