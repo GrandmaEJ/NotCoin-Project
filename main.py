@@ -12,6 +12,8 @@ load_dotenv()
 api_id = os.getenv('API_ID')
 api_hash = os.getenv('API_HASH')
 bot_token = os.getenv('BOT_TOKEN')
+bot_user = "coin_grandpa_bot"
+domain_app = "https://coin-grandpa.onrender.com"
 
 # Load user data from a JSON file
 def load_data():
@@ -48,13 +50,13 @@ async def start(client, message):
 @app.on_message(filters.command("play"))
 async def play(client, message):
     user_id = str(message.from_user.id)
-    game_url = f"https://yourdomain.com/play/{user_id}"
+    game_url = f"{domain_app}/play/{user_id}"
     await message.reply(f"Click [here]({game_url}) to start playing!", disable_web_page_preview=True)
 
 @app.on_message(filters.command("referral"))
 async def referral(client, message):
     user_id = str(message.from_user.id)
-    referral_link = f"https://t.me/your_bot_name?start={user_id}"
+    referral_link = f"https://t.me/{bot_user}?start={user_id}"
     await message.reply(f"Share this link to refer others: {referral_link}")
 
 if __name__ == "__main__":
