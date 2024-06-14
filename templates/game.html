@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Game</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='game.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Game!</h1>
+    <p>Tap the button to earn coins.</p>
+    <button id="tapButton">Tap</button>
+    <p>You have <span id="coinCount">0</span> coins.</p>
+    <script src="{{ url_for('static', filename='game.js') }}"></script>
+    <script>
+        const userId = "{{ user_id }}";  // This will be dynamically injected
+    </script>
+</body>
+</html>
