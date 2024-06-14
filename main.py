@@ -15,6 +15,8 @@ bot_token = os.getenv('BOT_TOKEN')
 bot_user = "coin_grandpa_bot"
 domain_app = "https://coin-grandpa.onrender.com"
 
+print(api_id)
+
 # Load user data from a JSON file
 def load_data():
     try:
