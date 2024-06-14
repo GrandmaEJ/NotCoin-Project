@@ -71,5 +71,4 @@ if __name__ == "__main__":
     import threading
     threading.Thread(target=lambda: web_app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5002)))).start()
 
-    # Keep the bot running
-    app.idle()
+    
