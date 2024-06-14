@@ -1,15 +1,15 @@
-# NotCoin Project 🚀 { Test }
+# NotCoin Project 🚀 { test }
 
 Welcome to the NotCoin Project! This project is a revolutionary new cryptocurrency built with simplicity and efficiency in mind.
 
 ## 📖 Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- [Introduction](#-introduction)
+- [Features](#-features)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Contact](#-contact)
 
 ## 📝 Introduction
 
@@ -48,4 +48,9 @@ To get started with the NotCoin project, follow these steps:
 To run the NotCoin project locally, use the following command:
 
 ```sh
-flask run
+python main.py
+```
+
+
+# Note ⚠️
+This `README.md` includes non-functional links in the Table of Contents, making it clear that the links will not work as they have extra characters. Feel free to adjust the content as necessary.
